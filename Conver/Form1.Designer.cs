@@ -30,7 +30,7 @@ namespace Conver
         private void InitializeComponent()
         {
             this.lblConversor1 = new System.Windows.Forms.Label();
-            this.cmbCantidad1 = new System.Windows.Forms.ComboBox();
+            this.cboAconversores = new System.Windows.Forms.ComboBox();
             this.btnCantidadConversores = new System.Windows.Forms.Button();
             this.txtCantidadConversores = new System.Windows.Forms.TextBox();
             this.lblConversores2 = new System.Windows.Forms.Label();
@@ -49,13 +49,14 @@ namespace Conver
             this.lblConversor1.TabIndex = 0;
             this.lblConversor1.Text = "DE:";
             // 
-            // cmbCantidad1
+            // cboAconversores
             // 
-            this.cmbCantidad1.FormattingEnabled = true;
-            this.cmbCantidad1.Location = new System.Drawing.Point(76, 42);
-            this.cmbCantidad1.Name = "cmbCantidad1";
-            this.cmbCantidad1.Size = new System.Drawing.Size(221, 21);
-            this.cmbCantidad1.TabIndex = 1;
+            this.cboAconversores.FormattingEnabled = true;
+            this.cboAconversores.Location = new System.Drawing.Point(76, 42);
+            this.cboAconversores.Name = "cboAconversores";
+            this.cboAconversores.Size = new System.Drawing.Size(221, 21);
+            this.cboAconversores.TabIndex = 1;
+            this.cboAconversores.SelectedIndexChanged += new System.EventHandler(this.cmbCantidad1_SelectedIndexChanged);
             // 
             // btnCantidadConversores
             // 
@@ -66,6 +67,7 @@ namespace Conver
             this.btnCantidadConversores.TabIndex = 2;
             this.btnCantidadConversores.Text = "Convertir";
             this.btnCantidadConversores.UseVisualStyleBackColor = true;
+            this.btnCantidadConversores.Click += new System.EventHandler(this.btnCantidadConversores_Click);
             // 
             // txtCantidadConversores
             // 
@@ -123,7 +125,7 @@ namespace Conver
             this.Controls.Add(this.lblConversores2);
             this.Controls.Add(this.txtCantidadConversores);
             this.Controls.Add(this.btnCantidadConversores);
-            this.Controls.Add(this.cmbCantidad1);
+            this.Controls.Add(this.cboAconversores);
             this.Controls.Add(this.lblConversor1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -135,7 +137,7 @@ namespace Conver
         #endregion
 
         private System.Windows.Forms.Label lblConversor1;
-        private System.Windows.Forms.ComboBox cmbCantidad1;
+        private System.Windows.Forms.ComboBox cboAconversores;
         private System.Windows.Forms.Button btnCantidadConversores;
         private System.Windows.Forms.TextBox txtCantidadConversores;
         private System.Windows.Forms.Label lblConversores2;
